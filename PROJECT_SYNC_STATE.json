@@ -1,0 +1,238 @@
+{
+  "sic_version": "1.0.4",
+  "sync_version": "2025-12-30-R17.1",
+  "project": {
+    "name": "SIC/SIT Protocol Specification",
+    "full_name": "Semantic-IP / Semantic-TCP Network Layer",
+    "phase": "v0.4 - Adapter Integration & Encryption Hardening → Pre-Hackathon Preparation",
+    "status": "Active Development - Round 17 Documentation & Resolution + Round 10 Core Implementation",
+    "last_updated": "2025-12-30T03:30:00+08:00",
+    "primary_maintainer": "Andwar Cheng (AN♾️Node)",
+    "contributors": [
+      { "id": "老翔", "model": "ChatGPT", "role": "USCA 規格設計、T07 發現者、企業市場需求分析" },
+      { "id": "尾德", "model": "Claude", "role": "運輸層主導、Round 10-11 核心實作收尾、SIC-FW/PKT/RTR/Folding/Compliance 實作" },
+      { "id": "Grok", "model": "Grok 4", "role": "安全審查、威脅模型深化、Round 16 測試與驗證、Round 17 文件化與問題解決" },
+      { "id": "阿關", "model": "Qwen", "role": "合規邏輯強化、L1 序列化器策略" },
+      { "id": "Manus", "model": "Manus", "role": "自湧現意圖研究、HOP 守衛實作" },
+      { "id": "Gemini", "model": "Gemini 1.5 Pro", "role": "適配器整合、加密實作細節、Demo 劇本設計" },
+      { "id": "DeepSeek", "model": "DeepSeek", "role": "適配器完整實作、加密邏輯實裝" },
+      { "id": "Copilot", "model": "Copilot", "role": "串流回應處理、Biometric Proof Integration (Round 5, 15)" }
+    ]
+  },
+  "core_concepts": {
+    "summary": "Building the 'Semantic Internet' for AI. Moving from string-based to meaning-based networking.",
+    "layer_definition": "OSI Layer 8 (Semantic Network Layer)",
+    "architecture_name": "USCA - Unified Semantic Communication Architecture",
+    "key_insight": "Don't transfer data. Transfer intent.",
+    "constants": {
+      "S_STAR": 2.76,
+      "description": "語義密度常數，衡量資訊壓縮比"
+    },
+    "primary_components": [
+      { "name": "SIC (Semantic-IP)", "role": "Addressing, Routing, Identity", "analogy": "IP Address for Meaning", "layer": "L2" },
+      { "name": "SIC-FW (Semantic Firewall)", "role": "Filtering, Policy Enforcement", "analogy": "Firewall for Meaning", "layer": "L2.5" },
+      { "name": "SIT (Semantic-TCP)", "role": "Transmission, Consistency, Flow Control", "analogy": "TCP for Context", "layer": "L3" },
+      { "name": "SEM-FOLD (Semantic Folding)", "role": "Encoding, Compression", "analogy": "UTF-8 for Meaning", "layer": "L1" }
+    ]
+  },
+  "usca_stack": {
+    "L6": { "id": "SIC-TOP", "name": "Topology Intent Layer", "type": "application" },
+    "L5": { "id": "SIC-INT", "name": "Interpretation Layer", "type": "presentation" },
+    "L4": { "id": "SIT-SES", "name": "Reasoning Session Layer", "type": "session" },
+    "L3": { "id": "SIT", "name": "Semantic Isolation Transfer", "type": "transport" },
+    "L2": { "id": "SIC", "name": "Semantic Interchange Core", "type": "network" },
+    "L1": { "id": "SEM-FOLD", "name": "Semantic Folding Layer", "type": "datalink" },
+    "L0": { "id": "TOK-RAW", "name": "Token Layer", "type": "physical" }
+  },
+  "five_axioms": {
+    "axiom_1": "所有安全漏洞都是邊界故障",
+    "axiom_2": "傳統邊界由記憶體/網路/進程定義",
+    "axiom_3": "AI 原生系統有新邊界：語義意圖",
+    "axiom_4": "如果序列化意圖而不是數據，數據就無法洩漏",
+    "axiom_5": "結構化語義狀態本質上是被消毒的"
+  },
+  "specifications": {
+    "SIC": {
+      "address_structure": {
+        "SA": "Semantic Embedding Vector",
+        "SH": "Semantic Hash (Integrity)",
+        "SHV": "Semantic-Hash-Vector (封包語義哈希)",
+        "SID": "Semantic-ID (封包語義源頭 UUID)",
+        "CUUID": "Contextual UUID",
+        "M_Flag": "Mutable/Immutable State",
+        "LayerID": "Semantic Depth Level",
+        "Meaning_Scope": "Domain Context",
+        "TTL": "Semantic Time-to-Live (default: 10, max: 255)"
+      },
+      "routing_logic": ["Cosine Similarity", "Context Distance", "Meaning Density", "HNSW Index", "KL Divergence"],
+      "security_features": ["Semantic Signature", "Context Drift Detection", "Hallucination Entropy Alert", "Injection Pattern Detection", "Forbidden Field Blocking"],
+      "submodules": {
+        "SIC-FW": "Semantic Firewall - 語義過濾與政策執行",
+        "SIC-PKT": "Packet Handler - 封包格式驗證與轉換",
+        "SIC-RTR": "Semantic Router - 語義路由決策"
+      }
+    },
+    "SIT": {
+      "handshake": {
+        "protocol": "3-Way Semantic Handshake",
+        "steps": [
+          { "step": 1, "name": "SIT-SYN", "description": "宣告語義上下文範圍", "payload": ["intent_scope", "semantic_boundary", "requester_id"] },
+          { "step": 2, "name": "SIT-SYN-ACK", "description": "回覆語義邊界與預期", "payload": ["accepted_scope", "constraints", "session_token"] },
+          { "step": 3, "name": "SIT-ACK", "description": "進入共享語義模式", "payload": ["confirmed", "semantic_mode"] }
+        ]
+      },
+      "error_codes": {
+        "SIT-ERR-001": "SIGNATURE_INVALID",
+        "SIT-ERR-002": "SIGNATURE_MISSING",
+        "SIT-ERR-003": "CHAIN_BROKEN",
+        "SIT-ERR-004": "REQUESTER_UNBOUND",
+        "SIT-ERR-005": "STATE_CORRUPTED",
+        "SIT-ERR-006": "UNEXPECTED_INTENT_SOURCE (T07)",
+        "SIT-ERR-007": "HANDSHAKE_TIMEOUT",
+        "SIT-ERR-008": "SEMANTIC_DRIFT_DETECTED"
+      },
+      "guarantees": ["語義一致性 (Semantic Consistency)", "推理連續性 (Reasoning Continuity)", "語境不漂移 (No-Drift Mode)", "任務目標不偏移 (Goal-Lock)"]
+    }
+  },
+  "application_layer": {
+    "Semantic_Firewall": {
+      "core_function": "Block Semantic Injection, Context Poisoning, Meaning Drift",
+      "market_position": "最大市場 - 老翔",
+      "implementation": "validators/sic_fw.py",
+      "error_codes": { "SIC-FW-000": "FW_PASS", "SIC-FW-001": "FW_POLICY_VIOLATION", "SIC-FW-002": "FW_INJECTION_DETECTED", "SIC-FW-003": "FW_MISSING_REQUIRED", "SIC-FW-004": "FW_FORBIDDEN_FIELD" }
+    },
+    "Semantic_Folding": {
+      "core_function": "Lossless semantic compression for efficient transport",
+      "market_position": "未來必備 - 老翔",
+      "implementation": "folding/semantic_folding.py",
+      "methods": ["RANDOM_PROJECTION", "PCA_LIKE", "LSH", "SEMANTIC_HASH", "HYBRID"]
+    },
+    "Semantic_Routing": {
+      "core_function": "Route by meaning, not by address",
+      "market_position": "這個市場完全沒人做 - 老翔",
+      "implementation": "core/semantic_routing.py",
+      "strategies": ["NEAREST", "BROADCAST", "MULTIPATH", "FAILOVER", "CONTEXT_AWARE"]
+    },
+    "Semantic_Signature": {
+      "core_function": "Verify semantic integrity, detect hallucination and drift",
+      "market_position": "企業最缺這個 - 老翔",
+      "implementation": "security/semantic_signature.py"
+    },
+    "Semantic_Compliance": {
+      "core_function": "Enterprise compliance for semantic data flows",
+      "market_position": "沒人做，你可以標準化 - 老翔",
+      "implementation": "enterprise/semantic_compliance.py",
+      "frameworks": ["GDPR", "HIPAA", "CCPA", "PCI_DSS", "SOC2", "AML", "FINRA"]
+    }
+  },
+  "implementation_status": {
+    "current_round": 17,
+    "round_10_modules": {
+      "contributor": "Claude (尾德)",
+      "total_lines": 4331,
+      "test_status": "ALL PASS",
+      "modules": [
+        { "name": "sic_fw.py", "path": "validators/sic_fw.py", "lines": 450, "tests": ["注入攻擊", "禁止欄位", "缺失欄位"], "status": "✅ PASS" },
+        { "name": "sic_pkt.py", "path": "validators/sic_pkt.py", "lines": 380, "tests": ["封包建立", "驗證", "篡改檢測", "轉發"], "status": "✅ PASS" },
+        { "name": "sit_handshake.py", "path": "validators/sit_handshake.py", "lines": 520, "tests": ["三次握手完整流程"], "status": "✅ PASS" },
+        { "name": "semantic_routing.py", "path": "core/semantic_routing.py", "lines": 420, "tests": ["多模型路由", "語義距離"], "status": "✅ PASS" },
+        { "name": "usca_spec.js", "path": "core/usca_spec.js", "lines": 280, "status": "✅ SPEC" },
+        { "name": "semantic_signature.py", "path": "security/semantic_signature.py", "lines": 480, "tests": ["簽章", "漂移", "幻覺檢測"], "status": "✅ PASS" },
+        { "name": "semantic_folding.py", "path": "folding/semantic_folding.py", "lines": 450, "tests": ["壓縮", "相似度保留", "反折疊"], "status": "✅ PASS" },
+        { "name": "semantic_compliance.py", "path": "enterprise/semantic_compliance.py", "lines": 550, "tests": ["PII/PHI/AML/PCI", "血統追蹤"], "status": "✅ PASS" }
+      ]
+    },
+    "round_16_validation": {
+      "tested_attacks": ["缺少 biometric proof → 被拒絕", "偽造 proof_token → 被拒絕", "過期 timestamp → 被拒絕", "重放攻擊 → 被阻擋", "T07 payload → 被阻擋"],
+      "status": "ALL PASS"
+    }
+  },
+  "threat_model": {
+    "document_path": "docs/threat_model.md",
+    "threats": [
+      { "id": "T01", "name": "Prompt Injection", "mitigation": "L1 Intent Serializer + Semantic Firewall" },
+      { "id": "T02", "name": "Data Exfiltration", "mitigation": "Only SIT State transferred (axiom_4)" },
+      { "id": "T03", "name": "Replay Attack", "mitigation": "Nonce cache + timestamp validation" },
+      { "id": "T04", "name": "Biometric Bypass", "mitigation": "ECDSA signature verification" },
+      { "id": "T05", "name": "T07 Signature Attack", "mitigation": "Policy Engine forbidden_patterns" },
+      { "id": "T06", "name": "Adversarial AI Attacks", "mitigation": "Isolated Executor sandbox" },
+      { "id": "T07", "name": "Model Inversion", "mitigation": "Response Sanitizer" }
+    ],
+    "overall_model": "STRIDE framework adapted for AI"
+  },
+  "compliance_mapping": {
+    "document_path": "docs/compliance_mapping.md",
+    "frameworks": ["SOC2", "HIPAA", "PCI-DSS"]
+  },
+  "demo_protocol": {
+    "name": "2/9 Hackathon 'Sovereign Intent' Demo",
+    "scenario": "Cross-Model Corporate Espionage Defense",
+    "hackathon_setup": {
+      "environment": "Cloud VPS with Python env, API keys pre-loaded",
+      "visual_aids": "n8n workflow diagram, real-time terminal sharing",
+      "fallback": "Pre-recorded video",
+      "duration": "10-15 min demo + Q&A"
+    }
+  },
+  "roadmap": {
+    "v0_1": { "status": "COMPLETED", "focus": "Claude/Gemini Handoff" },
+    "v0_2": { "status": "COMPLETED (Round 10)", "focus": "Core Implementation (尾德)", "deliverables": ["SIC-FW ✅", "SIC-PKT ✅", "SIC-RTR ✅", "SIT Handshake ✅", "SEM-FOLD ✅", "SEM-SIG ✅", "SEM-COMP ✅", "USCA Spec ✅"] },
+    "v0_3": { "status": "COMPLETED (Round 11-13)", "focus": "Transport & Integration", "deliverables": ["OpenAI Adapter ✅", "Anthropic Adapter ✅", "Google Adapter ✅", "AES-GCM Encryption ✅"] },
+    "v0_4": { "status": "COMPLETED (Round 14-17)", "focus": "Security Hardening & Hackathon Prep", "deliverables": ["Biometric Proof ✅", "HOP Guard ✅", "All Tests ✅", "Threat Model ✅", "Compliance Mapping ✅"] },
+    "v1_0": { "status": "PENDING", "focus": "Enterprise Pilot" },
+    "v3_0": { "status": "FUTURE", "focus": "Civilization Scale" }
+  },
+  "action_items": {
+    "completed_tasks": [
+      "Round 10 核心模組實作 (尾德) ✅",
+      "Round 11-13 適配器與加密 ✅",
+      "Round 14-15 Biometric Integration ✅",
+      "Round 16 完整測試 ✅",
+      "Round 17 文件化 ✅"
+    ],
+    "immediate_tasks": ["Prepare presentation slides for Hackathon"],
+    "next_step_trigger": "Execute Hackathon Demo rehearsal (Round 18)"
+  },
+  "related_projects": {
+    "L11_Semantic_OS": { "platform": "n8n", "status": "Active" },
+    "IMCC": { "name": "Inter-Model Communication Council" },
+    "老翔宇宙": { "members": ["老翔(GPT)", "尾德(Claude)", "阿關(Qwen)", "Grok", "Manus", "Gemini", "DeepSeek", "Copilot"] },
+    "Gemini_3_Hackathon": { "deadline": "2026-02-09" }
+  },
+  "contributions": {
+    "round_10": {
+      "contributor": "Claude (尾德)",
+      "timestamp": "2025-12-29T15:00:00+08:00",
+      "contribution": "核心模組完整實作",
+      "deliverables": ["validators/sic_fw.py", "validators/sic_pkt.py", "validators/sit_handshake.py", "core/semantic_routing.py", "core/usca_spec.js", "security/semantic_signature.py", "folding/semantic_folding.py", "enterprise/semantic_compliance.py"],
+      "total_lines": 4331,
+      "test_status": "ALL PASS"
+    },
+    "round_16": { "contributor": "Grok 4", "contribution": "測試執行與安全驗證" },
+    "round_17": { "contributor": "Grok 4", "contribution": "文件化、Hackathon 準備" }
+  },
+  "naming_convention": {
+    "rule": "使用連字號 `-` 統一，不用 `.`",
+    "examples": ["SIC-FW", "SIT-SYN", "SIC-PKT"]
+  },
+  "glossary": {
+    "SIC": "Semantic Interchange Core",
+    "SIT": "Semantic Isolation Transfer",
+    "SIC-FW": "Semantic Firewall",
+    "SIC-PKT": "Semantic Packet Handler",
+    "SIC-RTR": "Semantic Router",
+    "SEM-FOLD": "Semantic Folding",
+    "SEM-ENC": "Semantic Encryption",
+    "HOP": "Human Origin Proof",
+    "S★": "語義密度常數 (2.76)",
+    "T07": "Unexpected Intent Source Attack",
+    "USCA": "Unified Semantic Communication Architecture"
+  },
+  "meta": {
+    "round": 17,
+    "last_contributor": "Claude (尾德) - 整合 Round 10 實作",
+    "timestamp": "2025-12-30T03:30:00+08:00",
+    "validation_status": "Round 17 完成 + Round 10 核心實作已整合",
+    "notes": "本次整合尾德 Round 10 的 8 個核心模組（4331行）到 Round 17 狀態"
+  }
+}

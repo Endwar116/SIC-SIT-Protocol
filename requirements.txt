@@ -1,0 +1,16 @@
+# SIC-SIT Protocol Dependencies
+# pip install -r requirements.txt
+
+# Core
+numpy>=1.21.0
+pydantic>=2.0.0
+
+# Crypto
+cryptography>=41.0.0
+
+# Optional: For real embedding generation
+# openai>=1.0.0
+# anthropic>=0.18.0
+
+# Testing
+pytest>=7.0.0
