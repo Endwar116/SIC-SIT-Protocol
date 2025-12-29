@@ -8,7 +8,7 @@
 
 ## 🌐 什麼是 USCA？
 
-USCA（統一語義通訊架構）是一套完整的 AI 原生通訊協議棧，類似於網際網路的 TCP/IP 協議棧，但專門設計用於 **語義** 而非 **封包** 的傳輸。
+USCA（統一語義通訊架構）是一套完整的 AI 原生通訊協議棧，類似於網際網路的 TCP/IP 協議棧，但是專門設計用於 **語義** 而不是 **封包** 的傳輸。
 
 | 網路協議 | USCA 對應 | 功能 |
 |----------|-----------|------|
@@ -23,22 +23,22 @@ USCA（統一語義通訊架構）是一套完整的 AI 原生通訊協議棧，
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│  L6  SIC-TOP    Topology Intent Layer      (應用層)    │
-│  L5  SIC-INT    Interpretation Layer       (表現層)    │
-│  L4  SIT-SES    Reasoning Session Layer    (會話層)    │
+│  L6  SIC-TOP    Topology Intent Layer      (應用層)      │
+│  L5  SIC-INT    Interpretation Layer       (表現層)      │
+│  L4  SIT-SES    Reasoning Session Layer    (會話層)      │
 ├─────────────────────────────────────────────────────────┤
-│  L3  SIT        Semantic Isolation Transfer (傳輸層)   │
-│      ├─ SIT-SYN/ACK  三次握手                          │
-│      ├─ SIT-SIG      簽名驗證                          │
-│      └─ SIT-DRIFT    漂移偵測                          │
+│  L3  SIT        Semantic Isolation Transfer (傳輸層)     │
+│      ├─ SIT-SYN/ACK  三次握手                             │
+│      ├─ SIT-SIG      簽名驗證                             │
+│      └─ SIT-DRIFT    漂移偵測                             │
 ├─────────────────────────────────────────────────────────┤
-│  L2  SIC        Semantic Interchange Core   (網路層)   │
-│      ├─ SIC-FW       語義防火牆                        │
-│      ├─ SIC-PKT      封包處理                          │
-│      └─ SIC-RTR      語義路由                          │
+│  L2  SIC        Semantic Interchange Core   (網路層)     │
+│      ├─ SIC-FW       語義防火牆                           │
+│      ├─ SIC-PKT      封包處理                            │
+│      └─ SIC-RTR      語義路由                            │
 ├─────────────────────────────────────────────────────────┤
-│  L1  SEM-FOLD   Semantic Folding Layer     (資料鏈結層)│
-│  L0  TOK-RAW    Token Layer                (物理層)    │
+│  L1  SEM-FOLD   Semantic Folding Layer     (資料鏈結層)   │
+│  L0  TOK-RAW    Token Layer                (物理層)      │
 └─────────────────────────────────────────────────────────┘
 ```
 
@@ -151,7 +151,7 @@ sic-sit-protocol/
 ### 安裝
 
 ```bash
-git clone https://github.com/Endwar116/SIC-SIT-Protocol.git
+git clone https://github.com/Endwar116/USCA-Unified-Semantic-Communication-Architecture.git
 cd SIC-SIT-Protocol
 pip install -r requirements.txt
 ```
