@@ -25,8 +25,6 @@ from dataclasses import dataclass, field
 from enum import Enum
 from datetime import datetime
 from functools import lru_cache
-from functools import lru_cache
-import json
 import json
 
 
@@ -224,68 +222,38 @@ class SIC_Router:
     def _compute_semantic_distance(self, intent_profile: Dict, node: SemanticNode) -> float:
         """
         計算語義距離
-
+        
         0.0 = 完全匹配
         1.0 = 完全不匹配
-
+        
         生產環境應該使用：
         - Cosine similarity
         - KL divergence
         - HNSW 索引
         """
-        # 將字典轉換為字符串以進行緩存
-        intent_profile_str = json.dumps(intent_profile, sort_keys=True)
-        return self._compute_semantic_distance_cached(intent_profile_str, node.node_id)
-
-    @lru_cache(maxsize=1024)
-    def _compute_semantic_distance_cached(self, intent_profile_str: str, node_id: str) -> float:
-        """
-        計算語義距離（緩存版本）
-
-        0.0 = 完全匹配
-        1.0 = 完全不匹配
-
-        生產環境應該使用：
-        - Cosine similarity
-        - KL divergence
-        - HNSW 索引
-        """
-        # 將字符串轉換回字典
-        intent_profile = json.loads(intent_profile_str)
-        node = self.nodes.get(node_id)
-        if node is None:
-            return 1.0  # 節點不存在，返回最大距離
-
         distance = 0.5  # 基礎距離
-
+        
         # 領域匹配加分
-        intent_domains = set(intent_profile.get("domain_hints", set()))
+        intent_domains = intent_profile.get("domain_hints", set())
         node_domains = set(node.domains)
-
-        if intent_domains & node_domains:
-            # 有領域交集
-        # 領域匹配加分
-        intent_domains = set(intent_profile.get("domain_hints", []))
-        node_domains = set(node.domains)
-
+        
         if intent_domains & node_domains:
             # 有領域交集
             overlap = len(intent_domains & node_domains)
             distance -= 0.2 * overlap
-
+        
         # 語言匹配
         if intent_profile.get("language") in node.languages:
             distance -= 0.1
-
+        
         # 負載懲罰
         distance += node.load * 0.2
-
+        
         # 延遲懲罰
         distance += min(node.latency_ms / 1000, 0.2)
-
+        
         return max(0.0, min(1.0, distance))
-
-        return max(0.0, min(1.0, distance))
+    
     def _meets_requirements(self, node: SemanticNode, required: Optional[List[str]]) -> bool:
         """檢查節點是否滿足需求"""
         if not required:

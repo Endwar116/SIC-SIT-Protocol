@@ -24,6 +24,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 from datetime import datetime
 import re
+from functools import lru_cache
 
 
 class IntegrityStatus(Enum):
@@ -289,6 +290,11 @@ class SemanticIntegrity:
     
     def _compute_semantic_hash(self, content: str) -> str:
         """計算語義雜湊"""
+        return self._compute_semantic_hash_cached(content)
+
+    @lru_cache(maxsize=1024)
+    def _compute_semantic_hash_cached(self, content: str) -> str:
+        """計算語義雜湊（緩存版本）"""
         # 正規化：移除空白、轉小寫
         normalized = ' '.join(content.lower().split())
         

@@ -24,6 +24,7 @@ from datetime import datetime
 from typing import Any, Dict, Optional, Tuple
 from dataclasses import dataclass, field
 from enum import Enum
+from functools import lru_cache
 
 
 class SIC_PKT_Type(Enum):
