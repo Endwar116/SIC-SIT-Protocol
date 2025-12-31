@@ -23,6 +23,7 @@ from datetime import datetime, timedelta
 from typing import Any, Dict, Optional, Tuple
 from dataclasses import dataclass, field
 from enum import Enum
+from functools import lru_cache
 
 
 class SIT_HandshakeState(Enum):
@@ -444,8 +445,13 @@ class SIT_Handshake:
         """計算 HMAC 簽名"""
         # 移除簽名欄位
         data_copy = {k: v for k, v in data.items() if k != 'signature'}
-        # 使用 JSON 序列化以確保一致的格式
-        payload = json.dumps(data_copy, sort_keys=True, ensure_ascii=False).encode('utf-8')
+        # 使用 JSON 序列化以確保一致的格式 - 添加緩存以優化重複計算
+        return self._sign_cached(json.dumps(data_copy, sort_keys=True, ensure_ascii=False))
+
+    @lru_cache(maxsize=512)
+    def _sign_cached(self, payload_str: str) -> str:
+        """計算 HMAC 簽名（緩存版本）"""
+        payload = payload_str.encode('utf-8')
         return hmac.new(self.secret_key, payload, hashlib.sha256).hexdigest()
     
     def _verify_signature(self, data: Dict, signature: str) -> bool:
