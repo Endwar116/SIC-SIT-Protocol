@@ -1,0 +1,59 @@
+{
+  "experiment_id": "EXP-001A",
+  "type": "VECTOR_FOLDING",
+  "date": "2026-01-09",
+  "executor": "Manus-咩咩",
+  "environment": {
+    "python_version": "3.11.0rc1",
+    "script": "SIT-Protocol/folding/semantic_folding.py",
+    "method": "HYBRID (RANDOM_PROJECTION + PCA_LIKE + LSH + SEMANTIC_HASH)"
+  },
+  "test_configuration": {
+    "input_dim": 1536,
+    "output_dim": 64,
+    "random_seed": 42
+  },
+  "results": {
+    "test_1_basic_folding": {
+      "original_dim": 1536,
+      "folded_dim": 64,
+      "compression_ratio": "24.0x",
+      "compression_percentage": "95.8%",
+      "preservation_score": "2.55%"
+    },
+    "test_2_similarity_preservation": {
+      "original_space": {
+        "similar_vector_similarity": 0.995,
+        "different_vector_similarity": -0.023
+      },
+      "folded_space": {
+        "similar_vector_similarity": 0.995,
+        "different_vector_similarity": -0.074
+      },
+      "note": "Similarity structure preserved after folding"
+    },
+    "test_3_batch_folding": {
+      "vector_count": 10,
+      "manifold_radius": 1.035,
+      "semantic_density": 10.0
+    },
+    "test_4_unfolding": {
+      "unfolding_similarity": 0.980,
+      "note": "High fidelity reconstruction"
+    }
+  },
+  "reproducible": true,
+  "trl_status": "TRL4_VERIFIED",
+  "command": "python3 SIT-Protocol/folding/semantic_folding.py",
+  "trace": {
+    "source_file": "SIT-Protocol/folding/semantic_folding.py",
+    "lines": "455-500",
+    "output_log": "/tmp/exp001a_output.txt"
+  },
+  "limitations": [
+    "This benchmark tests VECTOR folding (1536-dim → 64-dim), NOT text compression",
+    "No embedding model involved",
+    "No file I/O interface"
+  ],
+  "note": "This is a VECTOR_FOLDING benchmark, separate from text compression claims (see EXP-001B)"
+}

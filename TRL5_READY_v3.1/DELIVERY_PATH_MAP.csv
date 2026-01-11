@@ -1,0 +1,29 @@
+delivery_id,delivery_file,repo,repo_path,commit_hash,status
+D0,D0_TRACE_MAP.csv,NONE,NONE,NONE,Generated in sandbox
+D1-1,canon/glossary.yml,NONE,NONE,NONE,Generated in sandbox
+D1-2,canon/axioms.md,NONE,NONE,NONE,Generated in sandbox
+D1-3,canon/interfaces.md,NONE,NONE,NONE,Generated in sandbox
+D1-4,canon/claims.md,NONE,NONE,NONE,Generated in sandbox
+D1-5,canon/unknowns.md,NONE,NONE,NONE,Generated in sandbox
+D2-1,lab/bundle_manifest.json,NONE,NONE,NONE,Generated in sandbox
+D2-2,lab/repro_steps.md,NONE,NONE,NONE,Generated in sandbox
+D2-3,lab/trace_log_format.jsonl,NONE,NONE,NONE,Generated in sandbox
+D2-4,lab/pass_fail_criteria.md,NONE,NONE,NONE,Generated in sandbox
+D3-1,handoff/README_FOR_HUMANS.md,NONE,NONE,NONE,Generated in sandbox
+D3-2,handoff/ARCHITECTURE_OVERVIEW.md,NONE,NONE,NONE,Generated in sandbox
+D3-3,handoff/ENTERPRISE_ADOPTION_GUIDE.md,NONE,NONE,NONE,Generated in sandbox
+D3-4,handoff/OPERATIONAL_CHECKLIST.md,NONE,NONE,NONE,Generated in sandbox
+D3-5,handoff/RISK_BOUNDARY.md,NONE,NONE,NONE,Generated in sandbox
+D4-1,patent/CLAIM_MAP.md,NONE,NONE,NONE,Generated in sandbox
+D4-2,patent/NOVELTY_POINTS.md,NONE,NONE,NONE,Generated in sandbox
+D4-3,patent/EVIDENCE_TRACE_TABLE.csv,NONE,NONE,NONE,Generated in sandbox
+D5-1,cross_ai/USAGE_GUIDE_FOR_AI.md,NONE,NONE,NONE,Generated in sandbox
+D5-2,cross_ai/CANON_PACK_INDEX.md,NONE,NONE,NONE,Generated in sandbox
+SOURCE-1,skeleton-schema.json,SIC-Semantic-Infinite-Context,skeleton-schema.json,67fe62dcfdc338aaddf53fdd3da925b59ac46791,In repo
+SOURCE-2,validate_skeleton.py,SIC-Semantic-Infinite-Context,tests/validate_skeleton.py,67fe62dcfdc338aaddf53fdd3da925b59ac46791,In repo
+SOURCE-3,validate_skeleton.js,SIC-Semantic-Infinite-Context,validate_skeleton.js,67fe62dcfdc338aaddf53fdd3da925b59ac46791,In repo
+SOURCE-4,example-01-simple.json,SIC-Semantic-Infinite-Context,example-01-simple.json,67fe62dcfdc338aaddf53fdd3da925b59ac46791,In repo
+SOURCE-5,example-02-medium.json,SIC-Semantic-Infinite-Context,example-02-medium.json,67fe62dcfdc338aaddf53fdd3da925b59ac46791,In repo
+SOURCE-6,AXIOMS.md,SIC-SIT-Protocol,sic-sit-constitution/constitution/AXIOMS.md,a0172a93890fc8360c4052c8d9ddd99d1a85fe92,In repo
+SOURCE-7,WHITEPAPER.md,SIC-Semantic-Infinite-Context,WHITEPAPER.md,67fe62dcfdc338aaddf53fdd3da925b59ac46791,In repo
+SOURCE-8,semantic_folding.py,SIC-SIT-Protocol,folding/semantic_folding.py,a0172a93890fc8360c4052c8d9ddd99d1a85fe92,In repo (copied to SIT)

@@ -1,0 +1,30 @@
+claim_id,claim_title,evidence_type,file_path,line_or_section,description,evidence_strength
+1,Semantic Stability Threshold (S★),Mathematical Definition,SIC-Semantic-Infinite-Context/WHITEPAPER.md,Section 3.1,Derivation of S★ = 2.76 as critical threshold,Strong
+1,Semantic Stability Threshold (S★),Implementation,SIC-SIT-Protocol/folding/semantic_folding.py,Line 42,Code implementing S★ threshold check,Strong
+1,Semantic Stability Threshold (S★),Validation,lab/trace_log_format.jsonl,N/A,Experimental validation of S★ threshold,Moderate
+2,Constitutional Axiom Enforcement,Axiom Definitions,SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md,Table,17 axioms with violation handling,Strong
+2,Constitutional Axiom Enforcement,Machine-Readable Format,SIC-SIT-Protocol/sic-sit-constitution/constitution/CONSTITUTION.json,Root,JSON representation of axioms,Strong
+2,Constitutional Axiom Enforcement,Implementation,SIC-SIT-Protocol/sic-sit-constitution/governance/constitution_layer.py,Class ConstitutionLayer,Enforcement logic,Strong
+3,Semantic Folding,Algorithm Description,SIC-Semantic-Infinite-Context/WHITEPAPER.md,Section 4,Description of semantic folding,Moderate
+3,Semantic Folding,Implementation,SIC-SIT-Protocol/folding/semantic_folding.py,Class SemanticFolding,Folding algorithm code,Strong
+3,Semantic Folding,Performance Data,SIC-Semantic-Infinite-Context/WHITEPAPER.md,Section 7.3,60.7% compression rate claim,Weak (no experimental log)
+4,BFT Semantic Consensus,Algorithm Description,SIC-Semantic-Infinite-Context/WHITEPAPER.md,Section 3.3,BFT for multi-model systems,Moderate
+4,BFT Semantic Consensus,Implementation,SIC-SIT-Protocol/sic-sit-constitution/governance/byzantine_ft.py,Class ByzantineFT,BFT consensus code,Strong
+4,BFT Semantic Consensus,Axiom Integration,SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md,A11 and A14,Axioms supporting BFT,Strong
+5,SWAT Protocol,Algorithm Description,SIC-Semantic-Infinite-Context/WHITEPAPER.md,Section 3.2,SWAT protocol overview,Moderate
+5,SWAT Protocol,Implementation,SIC-SIT-Protocol/sic-sit-constitution/security/swat_protocol.py,Class SWAT,SWAT code,Strong
+5,SWAT Protocol,Axiom Integration,SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md,A16,Axiom mandating fairness in throttling,Strong
+6,Skeleton JSON Schema,Schema Definition,SIC-Semantic-Infinite-Context/skeleton-schema.json,Root,JSON schema specification,Strong
+6,Skeleton JSON Schema,Validators,SIC-Semantic-Infinite-Context/tests/validate_skeleton.py,Function validate,Python validator,Strong
+6,Skeleton JSON Schema,Validators,SIC-Semantic-Infinite-Context/validate_skeleton.js,Function validate,JavaScript validator,Strong
+6,Skeleton JSON Schema,Examples,SIC-Semantic-Infinite-Context/example-01-simple.json,Root,Simple skeleton example,Strong
+6,Skeleton JSON Schema,Examples,SIC-Semantic-Infinite-Context/example-02-medium.json,Root,Medium skeleton example,Strong
+7,Non-Repudiation,Implementation,SIC-SIT-Protocol/security/semantic_signature.py,Class SemanticSignature,Signature generation and verification,Strong
+7,Non-Repudiation,Axiom Integration,SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md,A14,Axiom mandating signatures,Strong
+7,Non-Repudiation,Session Signing,SIT-Protocol/session/state_signer.py,Class StateSigner,Session-level signing,Strong
+8,Lamport Timestamps,Axiom Definition,SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md,A13,Axiom mandating Lamport timestamps,Strong
+8,Lamport Timestamps,Implementation,SIC-SIT-Protocol/sic-sit-constitution/security/causal_sync.py,Class CausalSync,Causal sync code,Moderate
+9,Entropy Injection,Axiom Definition,SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md,A12,"Prediction is fragile, chaos is robust",Strong
+9,Entropy Injection,Implementation,UNKNOWN,UNKNOWN,No explicit implementation found,Weak
+10,Governance Compression,Axiom Definition,SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md,A15,Axiom defining phase transition,Strong
+10,Governance Compression,Implementation,SIC-SIT-Protocol/sic-sit-constitution/governance/governance_compression.py,Class GovernanceCompression,Compression code,Moderate

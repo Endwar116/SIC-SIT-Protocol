@@ -1,0 +1,3 @@
+{"timestamp":"2026-01-09T00:00:00Z","test_id":"01","file":"example-01-simple.json","validator":"validate_skeleton.py","result":"PASSED","entity":"Demo Entity","round":1,"model":"Example","pending_threads":2}
+{"timestamp":"2026-01-09T00:00:01Z","test_id":"02","file":"example-02-medium.json","validator":"validate_skeleton.py","result":"PASSED","entity":"露緹亞","round":2,"model":"Demo","pending_threads":2}
+{"timestamp":"2026-01-09T00:00:02Z","test_id":"03","file":"example-03-complete.json","validator":"validate_skeleton.py","result":"FAILED","errors":["Missing root field: entity","Missing root field: memory","Missing root field: state","Missing root field: meta"],"note":"This file is a structural preview, not a skeleton JSON"}

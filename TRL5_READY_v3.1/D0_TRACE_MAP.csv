@@ -1,0 +1,46 @@
+file_path,bucket,role,trl_tag,trace_note
+SIC-Semantic-Infinite-Context/skeleton-schema.json,TRL4_MINIMAL,Schema Definition,TRL4_VERIFIED,Core skeleton JSON schema for SIC trace structure
+SIC-Semantic-Infinite-Context/tests/validate_skeleton.py,TRL4_MINIMAL,Validator (Python),TRL4_VERIFIED,Python validator for skeleton schema compliance
+SIC-Semantic-Infinite-Context/validate_skeleton.js,TRL4_MINIMAL,Validator (JavaScript),TRL4_VERIFIED,JavaScript validator for skeleton schema compliance
+SIC-Semantic-Infinite-Context/SIC_VALIDATION_PROTOCOL.md,TRL4_MINIMAL,Protocol Documentation,TRL4_VERIFIED,Validation protocol and testing procedures
+SIC-Semantic-Infinite-Context/example-01-simple.json,TRL4_MINIMAL,Test Example (Simple),TRL4_VERIFIED,Simple skeleton example for basic validation
+SIC-Semantic-Infinite-Context/example-02-medium.json,TRL4_MINIMAL,Test Example (Medium),TRL4_VERIFIED,Medium complexity skeleton example
+SIC-Semantic-Infinite-Context/example-03-complete.json,TRL4_MINIMAL,Test Example (Complete),TRL4_VERIFIED,Complete skeleton example with all fields
+SIC-Semantic-Infinite-Context/WHITEPAPER.md,DOCUMENTATION,Technical Whitepaper,TRL4_STABLE,External-facing technical whitepaper (professional version)
+SIC-Semantic-Infinite-Context/README.md,DOCUMENTATION,Repository Overview,TRL4_STABLE,Main repository documentation and quick start
+SIC-Semantic-Infinite-Context/QUICKSTART.md,DOCUMENTATION,Quick Start Guide,TRL3_DRAFT,Quick start guide for developers
+SIC-Semantic-Infinite-Context/EXECUTION_REPORT.md,DOCUMENTATION,Execution Report,TRL3_DRAFT,Execution and performance report
+SIC-Semantic-Infinite-Context/PROPRIETARY_NOTICE.md,LEGAL,Proprietary Notice,TRL4_STABLE,Proprietary rights and licensing notice
+SIC-Semantic-Infinite-Context/governance/constitution_layer.py,IMPLEMENTATION,Governance Layer,TRL3_PROTOTYPE,Constitution layer implementation (A1-A18 axioms)
+SIC-Semantic-Infinite-Context/security/non_repudiation.py,IMPLEMENTATION,Security Layer,TRL3_PROTOTYPE,Non-repudiation and cryptographic signing
+SIC-Semantic-Infinite-Context/internal/philosophy/VOID_PROTOCOL.md,INTERNAL,Philosophy Document,TRL0_CONCEPT,Internal philosophical boundary protocol (not for external use)
+SIC-Semantic-Infinite-Context/internal/partnerships/wfgy_alignment_report.md,INTERNAL,Partnership Analysis,TRL0_CONCEPT,WFGY alignment analysis (internal only)
+SIT-Protocol/README.md,DOCUMENTATION,Repository Overview,TRL3_DRAFT,SIT Protocol repository documentation
+SIT-Protocol/PROPRIETARY_NOTICE.md,LEGAL,Proprietary Notice,TRL4_STABLE,Proprietary rights and licensing notice
+SIT-Protocol/folding/semantic_folding.py,IMPLEMENTATION,Semantic Folding,TRL3_PROTOTYPE,Semantic folding and topology management
+SIT-Protocol/serializer/llm_serializer.py,IMPLEMENTATION,LLM Serializer,TRL3_PROTOTYPE,LLM-specific serialization layer
+SIT-Protocol/session/state_signer.py,IMPLEMENTATION,Session State Signer,TRL3_PROTOTYPE,Session state cryptographic signing
+SIT-Protocol/examples/example-01-read-profile.json,EXAMPLES,Test Example,TRL2_EXPERIMENTAL,SIT protocol example (read profile)
+SIT-Protocol/validators/validate_sit.py,VALIDATORS,Validator (Python),TRL2_EXPERIMENTAL,SIT protocol validator (experimental)
+SIC-SIT-Protocol/README.md,DOCUMENTATION,Protocol Specification,TRL4_STABLE,SIC-SIT Protocol specification overview
+SIC-SIT-Protocol/PROPRIETARY_NOTICE.md,LEGAL,Proprietary Notice,TRL4_STABLE,Proprietary rights and licensing notice
+SIC-SIT-Protocol/SPEC/README.md,SPECIFICATION,Spec Directory,TRL3_DRAFT,RFC-style specification directory (placeholder)
+SIC-SIT-Protocol/reference-impl/README.md,REFERENCE,Reference Implementation,TRL3_DRAFT,Non-normative reference implementation directory
+SIC-SIT-Protocol/__init__.py,IMPLEMENTATION,Package Init,TRL3_PROTOTYPE,Python package initialization
+SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md,SPECIFICATION,Axioms Definition,TRL4_STABLE,Core axioms (A1-A18) definition
+SIC-SIT-Protocol/sic-sit-constitution/constitution/CONSTITUTION.json,SPECIFICATION,Constitution JSON,TRL4_STABLE,Machine-readable constitution
+SIC-SIT-Protocol/sic-sit-constitution/governance/byzantine_ft.py,IMPLEMENTATION,Byzantine Fault Tolerance,TRL3_PROTOTYPE,BFT consensus implementation
+SIC-SIT-Protocol/sic-sit-constitution/governance/constitution_layer.py,IMPLEMENTATION,Constitution Layer,TRL3_PROTOTYPE,Constitution enforcement layer
+SIC-SIT-Protocol/sic-sit-constitution/governance/governance_compression.py,IMPLEMENTATION,Governance Compression,TRL2_EXPERIMENTAL,Governance state compression
+SIC-SIT-Protocol/sic-sit-constitution/security/causal_sync.py,IMPLEMENTATION,Causal Sync,TRL3_PROTOTYPE,Causal consistency synchronization
+SIC-SIT-Protocol/sic-sit-constitution/security/non_repudiation.py,IMPLEMENTATION,Non-Repudiation,TRL3_PROTOTYPE,Non-repudiation cryptographic layer
+SIC-SIT-Protocol/sic-sit-constitution/security/swat_protocol.py,IMPLEMENTATION,SWAT Protocol,TRL3_PROTOTYPE,Semantic Weight Adjustment and Throttling
+SIC-SIT-Protocol/core/semantic_routing.py,IMPLEMENTATION,Semantic Routing,TRL3_PROTOTYPE,Semantic routing and packet handling
+SIC-SIT-Protocol/folding/semantic_folding.py,IMPLEMENTATION,Semantic Folding,TRL3_PROTOTYPE,Semantic folding engine
+SIC-SIT-Protocol/security/semantic_signature.py,IMPLEMENTATION,Semantic Signature,TRL3_PROTOTYPE,Semantic signature generation and verification
+SIC-SIT-Protocol/enterprise/semantic_compliance.py,IMPLEMENTATION,Enterprise Compliance,TRL2_EXPERIMENTAL,Enterprise-grade compliance layer
+SIC-SIT-Protocol/demo/sovereign_intent_demo.py,DEMO,Sovereign Intent Demo,TRL2_EXPERIMENTAL,Demonstration of sovereign intent protocol
+SIC-SIT-Protocol/quickstart.py,DEMO,Quick Start Script,TRL2_EXPERIMENTAL,Quick start demonstration script
+SIC-SIT-Protocol/MODULE_LIST.md,DOCUMENTATION,Module List,TRL3_DRAFT,List of all modules and contributors
+SIC-SIT-Protocol/performance_optimization_report.md,DOCUMENTATION,Performance Report,TRL2_EXPERIMENTAL,Performance optimization analysis
+SIC-SIT-Protocol/security_vulnerability_report.md,DOCUMENTATION,Security Report,TRL2_EXPERIMENTAL,Security vulnerability analysis

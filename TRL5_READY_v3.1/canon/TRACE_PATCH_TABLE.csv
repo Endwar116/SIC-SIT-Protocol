@@ -1,0 +1,66 @@
+statement_id,statement_text,bucket_owner,trl_binding,trace_file,trace_path,trace_anchor,evidence_strength,notes
+S001,SIC is a governance layer with constitutional axioms (A1-A17),sic,TRL4_EVIDENCE,SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md,Root,Table of 17 axioms,HARD,All 17 axioms documented
+S002,SIT is a transport layer with semantic folding and isolation,sit,TRL4_EVIDENCE,SIC-SIT-Protocol/folding/semantic_folding.py,Class SemanticFolding,Implementation of folding algorithm,HARD,Code exists
+S003,SIC-SIT-Protocol is a normative specification layer (RFC-style),sic-sit,TRL4_EVIDENCE,SIC-SIT-Protocol/README.md,Root,Description of protocol purpose,SOFT,README describes purpose but no RFC docs yet
+S004,S★ (Semantic Stability Threshold) = 2.76,sic,TRL4_EVIDENCE,SIC-Semantic-Infinite-Context/WHITEPAPER.md,Section 3.1,Mathematical derivation of S★,HARD,Formula and derivation provided
+S005,S★ is the critical point beyond which semantic drift becomes irreversible,sic,TRL4_EVIDENCE,SIC-Semantic-Infinite-Context/WHITEPAPER.md,Section 3.1,Definition of S★,HARD,Explicitly stated
+S006,Skeleton JSON is a structured format for capturing semantic state,sic,TRL4_EVIDENCE,SIC-Semantic-Infinite-Context/skeleton-schema.json,Root,JSON schema definition,HARD,Schema file exists
+S007,Skeleton JSON has 4 required fields: entity memory state meta,sic,TRL4_EVIDENCE,SIC-Semantic-Infinite-Context/skeleton-schema.json,required array,List of required fields,HARD,Schema specifies required fields
+S008,Constitutional Axioms are 17 core principles (A1-A17),sic,TRL4_EVIDENCE,SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md,Root,Table of axioms,HARD,All 17 axioms documented
+S009,Axiom A1: All security vulnerabilities are boundary failures,sic,TRL4_EVIDENCE,SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md,Line 38,Axiom A1 text,HARD,Explicitly stated
+S010,Axiom A2: The boundary of AI-native systems is semantic intent not data,sic,TRL4_EVIDENCE,SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md,Line 39,Axiom A2 text,HARD,Explicitly stated
+S011,Axiom A3: Structured semantic state is inherently sanitized,sic,TRL4_EVIDENCE,SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md,Line 40,Axiom A3 text,HARD,Explicitly stated
+S012,Axiom A4: AI does not prophesy decide or replace will (HALT_AND_ESCALATE),sic,TRL4_EVIDENCE,SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md,Line 43,Axiom A4 text,HARD,Explicitly stated with violation handling
+S013,Axiom A5: Overflow is a signal not an error,sic,TRL4_EVIDENCE,SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md,Line 44,Axiom A5 text,HARD,Explicitly stated
+S014,Axiom A6: Quantification is consensus,sic,TRL4_EVIDENCE,SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md,Line 45,Axiom A6 text,HARD,Explicitly stated
+S015,Axiom A7: Semantic consistency is the only basis for cross-model collaboration,sic,TRL4_EVIDENCE,SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md,Line 46,Axiom A7 text,HARD,Explicitly stated
+S016,Axiom A8: Temporal topology is the fourth dimension of semantic density,sic,TRL4_EVIDENCE,SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md,Line 49,Axiom A8 text,HARD,Explicitly stated
+S017,Axiom A9: Format is the boundary of protocol cannot be overwritten by content value,sic,TRL4_EVIDENCE,SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md,Line 50,Axiom A9 text,HARD,Explicitly stated
+S018,Axiom A10: Do not trust data trust structure,sic,TRL4_EVIDENCE,SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md,Line 51,Axiom A10 text,HARD,Explicitly stated
+S019,Axiom A11: Do not trust nodes trust the network,sic,TRL4_EVIDENCE,SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md,Line 54,Axiom A11 text,HARD,Explicitly stated
+S020,Axiom A12: Prediction is fragile chaos is robust,sic,TRL4_EVIDENCE,SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md,Line 55,Axiom A12 text,HARD,Explicitly stated
+S021,Axiom A13: Distributed systems have no now only causal order,sic,TRL4_EVIDENCE,SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md,Line 56,Axiom A13 text,HARD,Explicitly stated
+S022,Axiom A14: Honest nodes can be misjudged malicious nodes can disguise as honest,sic,TRL4_EVIDENCE,SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md,Line 57,Axiom A14 text,HARD,Explicitly stated
+S023,Axiom A15: Governance complexity has a phase transition critical point,sic,TRL4_EVIDENCE,SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md,Line 60,Axiom A15 text,HARD,Explicitly stated
+S024,Axiom A16: Security mechanisms must not sacrifice participation fairness,sic,TRL4_EVIDENCE,SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md,Line 61,Axiom A16 text,HARD,Explicitly stated
+S025,Axiom A17: Semantic value takes priority over computational resources,sic,TRL4_EVIDENCE,SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md,Line 62,Axiom A17 text,HARD,Explicitly stated
+S026,BFT (Byzantine Fault Tolerance) tolerates up to f < n/3 malicious nodes,multi,TRL4_EVIDENCE,SIC-SIT-Protocol/sic-sit-constitution/governance/byzantine_ft.py,Class ByzantineFT,Implementation of BFT consensus,HARD,Code exists
+S027,SWAT (Semantic Weight Adjustment and Throttling) is an adaptive threshold management protocol,sic,TRL4_EVIDENCE,SIC-SIT-Protocol/sic-sit-constitution/security/swat_protocol.py,Class SWAT,Implementation of SWAT,HARD,Code exists
+S028,Semantic Folding is a compression algorithm that preserves topological structure,sit,TRL3_PROTOTYPE,SIC-SIT-Protocol/folding/semantic_folding.py,Class SemanticFolding,Algorithm implementation,SOFT,Code exists but no experimental validation
+S029,"60.7% text compression (external engine, non-reproducible)",sit,SIC-Semantic-Infinite-Context/evidence_logs/mem0_log.txt,2026-01-01T14:20:00Z,EXP-001B,SOFT,TRL3_CLAIMED
+S030,0% semantic drift over 20 rounds is claimed,sic,TRL3_CLAIMED,SIC-Semantic-Infinite-Context/WHITEPAPER.md,Section 7.3,Performance claim,NONE,No experimental log provided
+S031,<100ms consensus latency is claimed,multi,TRL3_CLAIMED,SIC-Semantic-Infinite-Context/WHITEPAPER.md,Section 7.3,Performance claim,NONE,No experimental log provided
+S032,TRL4 verification: 2/2 skeleton tests passed,sic,TRL4_EVIDENCE,lab/trace_log_format.jsonl,Test 01 and 02,Trace log entries,HARD,Actual test execution recorded
+S033,example-03-complete.json is not a skeleton JSON (expected fail),sic,TRL4_EVIDENCE,SIC-Semantic-Infinite-Context/example-03-complete.json,Root,File content inspection,HARD,File is ASEE v2 preview not skeleton
+S034,Non-repudiation is ensured using Ed25519 signatures,sic,TRL3_PROTOTYPE,SIC-SIT-Protocol/security/semantic_signature.py,Class SemanticSignature,Implementation of signing,SOFT,Code exists but no deployment evidence
+S035,Lamport timestamps are used for causal ordering,multi,TRL3_PROTOTYPE,SIC-SIT-Protocol/sic-sit-constitution/security/causal_sync.py,Class CausalSync,Implementation of causal sync,SOFT,Code exists but no deployment evidence
+S036,k coefficient is mentioned but formula not defined,UNKNOWN,UNKNOWN,NONE,NONE,NONE,NONE,No trace found in repo
+S037,τ (tau) threshold is mentioned but value not defined,UNKNOWN,UNKNOWN,NONE,NONE,NONE,NONE,No trace found in repo
+S038,TSIG (Temporal Semantic Integrity Guard) is mentioned but not defined,UNKNOWN,UNKNOWN,NONE,NONE,NONE,NONE,Appears in meta-cognition but not in repo
+S039,EQG (Entropy Quantification Gate) is mentioned but not defined,UNKNOWN,UNKNOWN,NONE,NONE,NONE,NONE,Appears in meta-cognition but not in repo
+S040,GBP (Governance Boundary Protocol) is mentioned but not defined,UNKNOWN,UNKNOWN,NONE,NONE,NONE,NONE,Appears in meta-cognition but not in repo
+S041,Relationship between 17 axioms and 107 tools is not defined,UNKNOWN,UNKNOWN,NONE,NONE,NONE,NONE,No explicit mapping found
+S042,SIC packet schema is not canonically defined,UNKNOWN,UNKNOWN,NONE,NONE,NONE,NONE,Only validators exist no schema file
+S043,Relationship between Skeleton JSON and SIC packet is not defined,UNKNOWN,UNKNOWN,NONE,NONE,NONE,NONE,No explicit documentation found
+S047,"τ > 0.7 定義為強關聯，必須一起折疊",sic-sit,SPEC_PART1_THEORY.md,137,§2.2,HARD,TRL4_EVIDENCE
+S048,"張力場方程式: T(x,y,z,t) = ∇²S + k·∇I + λF",sic-sit,SPEC_PART1_THEORY.md,68,§1.3,HARD,TRL4_EVIDENCE
+S049,"S/F/I 三維模型: SFI_Score = S × F × I",sic-sit,SPEC_PART1_THEORY.md,55,§1.2,HARD,TRL4_EVIDENCE
+S050,"SFI_Score > 0.7 = EXCELLENT",sic-sit,SPEC_PART1_THEORY.md,56,§1.2,HARD,TRL4_EVIDENCE
+S051,"TSIG (TopologySignature) 拓樸指紋系統",sic,SPEC_PART2_ENGINEERING.md,152,§3.4,HARD,TRL4_EVIDENCE
+S052,"EQG (Entropy Quantification Gate) 情緒尖峰治理",sic,SPEC_PART2_ENGINEERING.md,292,§4.2,HARD,TRL4_EVIDENCE
+S053,"EQG_Score = 0.25*T1 + 0.15*T2 + 0.10*T3 + 0.20*T4 + 0.30*T5",sic,SPEC_PART2_ENGINEERING.md,307,§4.2,HARD,TRL4_EVIDENCE
+S054,"GBP (Governance Boundary Protocol) 治理邊界政策",sic,SPEC_PART2_ENGINEERING.md,262,§4.1,HARD,TRL4_EVIDENCE
+S055,"GBP 定義: f(intent) ≤ boundary",sic,SPEC_PART2_ENGINEERING.md,270,§4.1,HARD,TRL4_EVIDENCE
+S056,"TCC (Topology Conflict Checker) 拓樸衝突檢查器",sit,SPEC_PART2_ENGINEERING.md,45,§3.1,HARD,TRL4_EVIDENCE
+S057,"TFE (Topology Folding Engine) 拓樸折疊引擎",sit,SPEC_PART2_ENGINEERING.md,80,§3.2,HARD,TRL4_EVIDENCE
+S058,"SCEA (Semantic Causal Event Anchor) 語義因果錨點",sit,SPEC_PART2_ENGINEERING.md,120,§3.3,HARD,TRL4_EVIDENCE
+S059,"ICM (Incremental Compression Mode) 增量壓縮模式",sit,SPEC_PART3_IMPLEMENTATION.md,50,§6.1,HARD,TRL3_PROTOTYPE
+S060,"IDIE (Incremental Drift Isolation Engine) 增量漂移隔離引擎",sit,SPEC_PART3_IMPLEMENTATION.md,90,§6.2,HARD,TRL3_PROTOTYPE
+S061,"256 種測試模式 (4^4 組合)",multi,SPEC_PART3_IMPLEMENTATION.md,150,§7.1,HARD,TRL3_PROTOTYPE
+S062,"Dashboard 部署 (Streamlit)",multi,SPEC_PART4_DEPLOYMENT.md,40,§8.1,HARD,TRL3_PROTOTYPE
+S063,"CLI 工具 (semantic-topology)",multi,SPEC_PART4_DEPLOYMENT.md,80,§8.2,HARD,TRL3_PROTOTYPE
+S064,"API 服務 (FastAPI)",multi,SPEC_PART4_DEPLOYMENT.md,120,§8.3,HARD,TRL3_PROTOTYPE
+S065,"案例 1: 金融風控 (語義漂移偵測)",multi,SPEC_PART4_DEPLOYMENT.md,200,§9.1,SOFT,TRL3_CLAIMED
+S066,"案例 2: 多模型協作 (跨平台語義傳輸)",multi,SPEC_PART4_DEPLOYMENT.md,240,§9.2,SOFT,TRL3_CLAIMED
+S067,"案例 3: AI 安全 (對抗性輸入防禦)",multi,SPEC_PART4_DEPLOYMENT.md,280,§9.3,SOFT,TRL3_CLAIMED
+S068,"1536→64 vector folding (95.8% compression)",sit,SIT-Protocol/folding/semantic_folding.py,455-500,EXP-001A,HARD,TRL4_VERIFIED

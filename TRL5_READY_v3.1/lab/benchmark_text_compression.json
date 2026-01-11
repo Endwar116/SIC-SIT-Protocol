@@ -1,0 +1,34 @@
+{
+  "experiment_id": "EXP-001B",
+  "type": "TEXT_COMPRESSION",
+  "date": "2026-01-01",
+  "executor": "External (Mem0 engine)",
+  "source": {
+    "file": "SIC-Semantic-Infinite-Context/evidence_logs/mem0_log.txt",
+    "line": "2026-01-01T14:20:00Z"
+  },
+  "test_configuration": {
+    "engine": "Mem0 (external)",
+    "input_format": "text",
+    "output_format": "compressed_text"
+  },
+  "results": {
+    "input_bytes": 1540,
+    "output_bytes": 605,
+    "compression_ratio": "60.7%",
+    "note": "This is a CLAIM based on external log, not a reproducible benchmark"
+  },
+  "reproducible": false,
+  "trl_status": "TRL3_CLAIMED",
+  "limitations": [
+    "External engine (Mem0) not available in repo",
+    "No source code or script to reproduce",
+    "Single data point from log file",
+    "Cannot verify compression quality or semantic preservation"
+  ],
+  "trace": {
+    "source_file": "SIC-Semantic-Infinite-Context/evidence_logs/mem0_log.txt",
+    "type": "LOG_ENTRY"
+  },
+  "warning": "This is NOT a TRL4 benchmark. Do not cite as verified evidence. See EXP-001A for reproducible vector folding benchmark."
+}

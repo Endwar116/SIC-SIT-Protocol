@@ -1,0 +1,152 @@
+# SIC/SIT Canon - Glossary
+# Purpose: Cross-AI consistent terminology (no memory, no repo access required)
+# Version: 1.0
+# Created: 2026-01-09
+# Trace: All definitions must reference source file + line/section
+
+terms:
+  - term: "SIC"
+    full_name: "Semantic Infinite Context"
+    definition: "A constitutional governance layer for maintaining semantic stability in extended AI dialogue"
+    trace:
+      file: "SIC-Semantic-Infinite-Context/WHITEPAPER.md"
+      section: "Executive Summary"
+    version: "1.0"
+    applicable_files: ["WHITEPAPER.md", "README.md", "QUICKSTART.md"]
+
+  - term: "SIT"
+    full_name: "Semantic Isolation & Transport"
+    definition: "A transport layer protocol for semantic folding, isolation, and conflict resolution"
+    trace:
+      file: "SIT-Protocol/README.md"
+      section: "Overview"
+    version: "1.0"
+    applicable_files: ["SIT-Protocol/*"]
+
+  - term: "SIC-SIT-Protocol"
+    full_name: "SIC-SIT Protocol Specification"
+    definition: "The normative specification that defines the protocol stack (RFC-style)"
+    trace:
+      file: "SIC-SIT-Protocol/README.md"
+      section: "Overview"
+    version: "1.0"
+    applicable_files: ["SIC-SIT-Protocol/*"]
+
+  - term: "S★"
+    full_name: "Semantic Stability Threshold"
+    definition: "The critical point (S★ = 2.76) beyond which semantic drift becomes irreversible"
+    trace:
+      file: "SIC-Semantic-Infinite-Context/WHITEPAPER.md"
+      section: "3.1 The Semantic Stability Threshold"
+    version: "1.0"
+    value: 2.76
+    unit: "dimensionless"
+    applicable_files: ["WHITEPAPER.md", "semantic_folding.py"]
+
+  - term: "Skeleton"
+    full_name: "SIC Skeleton JSON"
+    definition: "A structured JSON format that captures the semantic state of an AI entity at a specific round"
+    trace:
+      file: "SIC-Semantic-Infinite-Context/skeleton-schema.json"
+      section: "root"
+    version: "1.0"
+    required_fields: ["entity", "memory", "state", "meta"]
+    applicable_files: ["skeleton-schema.json", "validate_skeleton.py", "example-01-simple.json"]
+
+  - term: "TRL"
+    full_name: "Technology Readiness Level"
+    definition: "A metric for assessing the maturity of a technology (TRL1-TRL9)"
+    trace:
+      file: "UNKNOWN"
+      section: "UNKNOWN"
+    version: "1.0"
+    note: "TRL is a standard NASA/DoD metric, not specific to SIC/SIT"
+    applicable_files: ["D0_TRACE_MAP.csv"]
+
+  - term: "SWAT"
+    full_name: "Semantic Weight Adjustment and Throttling"
+    definition: "An adaptive threshold management protocol that adjusts semantic weights based on system load"
+    trace:
+      file: "SIC-SIT-Protocol/sic-sit-constitution/security/swat_protocol.py"
+      section: "class SWAT"
+    version: "1.0"
+    applicable_files: ["swat_protocol.py", "WHITEPAPER.md"]
+
+  - term: "BFT"
+    full_name: "Byzantine Fault Tolerance"
+    definition: "A consensus mechanism that tolerates up to f < n/3 malicious nodes"
+    trace:
+      file: "SIC-SIT-Protocol/sic-sit-constitution/governance/byzantine_ft.py"
+      section: "class ByzantineFT"
+    version: "1.0"
+    applicable_files: ["byzantine_ft.py", "WHITEPAPER.md"]
+
+  - term: "Semantic Folding"
+    full_name: "Semantic Folding"
+    definition: "A topology-based compression technique that preserves semantic structure while reducing dimensionality"
+    trace:
+      file: "SIC-SIT-Protocol/folding/semantic_folding.py"
+      section: "class SemanticFolding"
+    version: "1.0"
+    applicable_files: ["semantic_folding.py", "WHITEPAPER.md"]
+
+  - term: "Axiom"
+    full_name: "Constitutional Axiom"
+    definition: "A core principle (A1-A17) that governs the behavior of the SIC-SIT system"
+    trace:
+      file: "SIC-SIT-Protocol/sic-sit-constitution/constitution/AXIOMS.md"
+      section: "table"
+    version: "1.1.3"
+    count: 17
+    applicable_files: ["AXIOMS.md", "CONSTITUTION.json"]
+
+  - term: "Canon"
+    full_name: "Canonical Reference"
+    definition: "A set of authoritative definitions, axioms, and interfaces for cross-AI consistency"
+    trace:
+      file: "canon/glossary.yml"
+      section: "this file"
+    version: "1.0"
+    applicable_files: ["canon/*"]
+
+  - term: "TSIG"
+    full_name: "Temporal Semantic Integrity Guard"
+    definition: "UNKNOWN - mentioned in meta-cognition architecture but not found in repo"
+    trace:
+      file: "UNKNOWN"
+      section: "UNKNOWN"
+    version: "UNKNOWN"
+    status: "UNKNOWN"
+    note: "This term appears in meta-cognition architecture but has no implementation in the current repo"
+
+  - term: "EQG"
+    full_name: "Entropy Quantification Gate"
+    definition: "UNKNOWN - mentioned in meta-cognition architecture but not found in repo"
+    trace:
+      file: "UNKNOWN"
+      section: "UNKNOWN"
+    version: "UNKNOWN"
+    status: "UNKNOWN"
+    note: "This term appears in meta-cognition architecture but has no implementation in the current repo"
+
+  - term: "GBP"
+    full_name: "Governance Boundary Protocol"
+    definition: "UNKNOWN - mentioned in meta-cognition architecture but not found in repo"
+    trace:
+      file: "UNKNOWN"
+      section: "UNKNOWN"
+    version: "UNKNOWN"
+    status: "UNKNOWN"
+    note: "This term appears in meta-cognition architecture but has no implementation in the current repo"
+
+unknowns:
+  - term: "TSIG"
+    reason: "Mentioned in meta-cognition architecture but no implementation found"
+  - term: "EQG"
+    reason: "Mentioned in meta-cognition architecture but no implementation found"
+  - term: "GBP"
+    reason: "Mentioned in meta-cognition architecture but no implementation found"
+  - term: "k coefficient"
+    reason: "Mentioned in WHITEPAPER.md but no formula or implementation found"
+  - term: "τ (tau) threshold"
+    reason: "Mentioned in WHITEPAPER.md but no specific value found"
